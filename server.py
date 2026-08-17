@@ -32,6 +32,11 @@ def sent_analyzer():
     sadness_score = response.get('sadness')
     dominant_emotion = response.get('dominant_emotion')    
 
+    #Validate if dominant_emotion is None for blank entries
+    if dominant_emotion is None:
+        # Return text invalid entries
+        return "Invalid text! Please try again!."
+
     # Return a formatted string with the scores or emotion and the dominant emotion
     return (
         f"For the given statement, the system response is 'anger': {anger_score},"
