@@ -30,7 +30,7 @@ def sent_analyzer():
     fear_score = response.get('fear')
     joy_score = response.get('joy')
     sadness_score = response.get('sadness')
-    dominant_emotion = response.get('dominant_emotion')    
+    dominant_emotion = response.get('dominant_emotion')
 
     #Validate if dominant_emotion is None for blank entries
     if dominant_emotion is None:
